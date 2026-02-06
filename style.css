@@ -136,3 +136,88 @@ button:hover {
     background-color: green;
     box-shadow: 0 0 30px green;
 }
+
+/* Le bouton pour ouvrir la modal */
+#bouton-modal {
+    background-color: #b08004;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 650px;
+    left: 330px;
+}
+
+#bouton-modal:hover {
+    background-color: red;
+}
+
+/* La modal (cachée par défaut) */
+.modal {
+    display: none; /* Cachée au départ */
+    position: fixed; /* Reste à l'écran même si on scroll */
+    z-index: 1000; /* Au-dessus de tout */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+}
+
+/* Le contenu de la modal (la boîte blanche) */
+.modal-contenu {
+    background-color: white;
+    margin: 10% auto; /* Centré verticalement et horizontalement */
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Le X pour fermer */
+.fermer {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.fermer:hover {
+    color: black;
+}
+
+
+/* Texte */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Bouton pour fermer */
+.bouton-fermer {
+    background-color: #127749;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    position: absolute;
+    top: 170px;
+    left: 400px;
+}
+
+.bouton-fermer:hover {
+    background-color: #45a049;
+}
+

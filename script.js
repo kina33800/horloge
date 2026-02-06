@@ -88,7 +88,7 @@ function allumerFeu(couleur) {
     document.getElementById('rouge').className = 'light';
     document.getElementById('orange').className = 'light';
     document.getElementById('vert').className = 'light';
-    
+     
     // Allumer le feu demandé
     if (couleur == 'rouge') {
         document.getElementById('rouge').className = 'light lightRed';
@@ -124,3 +124,31 @@ allumerFeu('rouge');
 
 // Toutes les 5 secondes
 setInterval(changerFeu, 5000);
+
+// Récupérer les éléments
+let modal = document.getElementById('ma-modal');
+let bouton = document.getElementById('bouton-modal');
+let croix = document.getElementsByClassName('fermer')[0];
+let boutonFermer = document.getElementsByClassName('bouton-fermer')[0];
+
+// clique sur le bouton, ouvrir la modal
+bouton.onclick = function() {
+    modal.style.display = 'block';
+}
+
+//  clique sur X, fermer la modal
+croix.onclick = function() {
+    modal.style.display = 'none';
+}
+
+//  clique sur le bouton, fermer la modal
+boutonFermer.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// clique en dehors de la boîte, fermer la modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
