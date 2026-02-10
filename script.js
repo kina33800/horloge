@@ -255,7 +255,7 @@ class Personnage {
 // CLASSE Guerrier
 class Guerrier extends Personnage {
     constructor(nom, sante, force, armure, arme) {
-        super(nom, sante, force, 'Guerrier');
+        super(nom, sante, force, 'Gueguerre');
         this.armure = armure;
         this.arme = arme;
     }
@@ -272,7 +272,7 @@ class Guerrier extends Personnage {
 
 class Mage extends Personnage {
     constructor(nom, sante, force, mana, sort) {
-        super(nom, sante, force, 'Mage');
+        super(nom, sante, force, 'Magic');
         this.mana = mana;
         this.sort = sort;
     }
@@ -288,7 +288,7 @@ class Mage extends Personnage {
 
 class Archer extends Personnage {
     constructor(nom, sante, force, agilite, typeArc) {
-        super(nom, sante, force, 'Archer');
+        super(nom, sante, force, 'Arrow');
         this.agilite = agilite;
         this.typeArc = typeArc;
     }
@@ -304,7 +304,7 @@ class Archer extends Personnage {
 
 class Voleur extends Personnage {
     constructor(nom, sante, force, discretion, armeSecrete) {
-        super(nom, sante, force, 'Voleur');
+        super(nom, sante, force, 'Robin');
         this.discretion = discretion;
         this.armeSecrete = armeSecrete;
     }
@@ -321,19 +321,44 @@ class Voleur extends Personnage {
 console.log(' MES PERSONNAGES \n');
 
 // Créer un Guerrier
-const aragorn = new Guerrier('Guerrier', 150, 85, 'Armure lourde', 'Épée longue');
-aragorn.afficher();
+const Gueguerre = new Guerrier('Gueguerre', 150, 85, 'Armure lourde', 'Épée longue');
+Gueguerre.afficher();
 
 // Créer un Mage
-const gandalf = new Mage('Mage', 80, 40, 200, 'Boule de feu');
-gandalf.afficher();
+const Magic = new Mage('Magic', 80, 40, 200, 'Boule de feu');
+Magic.afficher();
 
 // Créer un Archer
-const legolas = new Archer('Archer', 100, 60, 95, 'Arc elfique');
-legolas.afficher();
+const Arrow = new Archer('Arrow', 100, 60, 95, 'Arc elfique');
+Arrow.afficher();
 
 // Créer un Voleur
-const ezio = new Voleur('Voleur', 90, 55, 98, 'Lame cachée');
-ezio.afficher();
+const Robin = new Voleur('Robin', 90, 55, 98, 'Lame cachée');
+Robin.afficher();
 
 console.log('\n Tous les personnages ont été créés !');
+
+let age = 22;
+let message = age >= 18 ? 'autorisé' : 'refusé';
+console.log(message);
+
+let prenom = prompt ('quel est ton prénom ?');
+let messagePrenom = prenom ? `Bonjour, ${prenom} !` : 'Aucun prénom saisi';
+console.log(messagePrenom);
+
+let nombre = prompt ('Choisi un nombre');
+let messagePair = nombre%2 ? 'Impaire' : 'Paire';
+console.log(messagePair);
+
+let note = Number(prompt("Donne moi une note netre 0 et 20 "));
+let messageNote = note >= 16 ? 'Excellent' : note >= 12 ? 'Bien' : note >= 10 ? 'Moyen' : 'Insuffisant';
+console.log(messageNote)
+
+let tab = [3, -7, 14, -23, 29, -33];
+let messageTab = tab.map(n => n > 0 ? '+' : n < 0 ? '-' : '0'); 
+console.log(messageTab)
+
+let TabPair = [3, -7, 14, -23, 29, -33]; 
+let messageTabPair = TabPair.filter(n => n%2 === 0 ? true : false); 
+console.log(messageTabPair)
+
